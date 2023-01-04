@@ -1,13 +1,13 @@
 /**
- * Configuration object to be passed to MSAL instance on creation. 
- * For a full list of MSAL.js configuration parameters, visit:
- * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md 
- */
+* Configuration object to be passed to MSAL instance on creation.
+* For a full list of MSAL.js configuration parameters, visit:
+* https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md
+*/
 const msalConfig = {
     auth: {
-        clientId: "Enter_the_Application_Id_Here",
-        authority: "https://login.microsoftonline.com/Enter_the_Tenant_Info_Here",
-        redirectUri: "Enter_the_Redirect_Uri_Here",
+        clientId: "CHANGE_IT",
+        authority: "https://login.microsoftonline.com/CHANGE_IT_TENANT_ID_SHOULD_BE_HERE",
+        redirectUri: "http://localhost:3000",
     },
     cache: {
         cacheLocation: "localStorage", // This configures where your cache will be stored
@@ -17,8 +17,8 @@ const msalConfig = {
 
 // Add here the endpoints and scopes for the web API you would like to use.
 const apiConfig = {
-    uri: "Enter_the_Web_Api_Uri_Here", // e.g. http://localhost:5000/api
-    scopes: ["Enter_the_Web_Api_Scope_Here"] // e.g. ["scp1", "scp2"]
+    uri: "http://localhost:5000/api", // e.g. http://localhost:5000/api
+    scopes: ["api://CHANGE_IT/access_as_user"] // e.g. ["scp1", "scp2"]
 };
 
 /**

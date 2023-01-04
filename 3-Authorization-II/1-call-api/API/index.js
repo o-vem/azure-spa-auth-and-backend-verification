@@ -46,7 +46,7 @@ app.get('/api',
     (req, res) => {
         console.log('Validated claims: ', req.authInfo);
 
-        // Service relies on the name claim.  
+        // Service relies on the name claim.
         res.status(200).json({
             'name': req.authInfo['name'],
             'issued-by': req.authInfo['iss'],
